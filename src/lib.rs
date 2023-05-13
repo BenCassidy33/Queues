@@ -6,7 +6,7 @@
 pub mod queue {
 
     #[derive(Debug)]
-    pub struct QueueStruct<T> {
+    pub struct Queue<T> {
         pub queue: Vec<T>,
     }
 
@@ -19,7 +19,7 @@ pub mod queue {
         fn destroy(&mut self);
     }
 
-    impl<T> QueueActions<T> for QueueStruct<T> {
+    impl<T> QueueActions<T> for Queue<T> {
         /// Will add an item to the end of the queue
         ///
         /// # Examples
@@ -126,8 +126,8 @@ pub mod queue {
     /// let queue = create_queue(vec![1, 2, 3, 4, 5]);
     /// assert_eq!(queue.queue, [1, 2, 3, 4, 5]);
     /// ````
-    pub fn create_queue<T>(items: Vec<T>) -> QueueStruct<T> {
-        return QueueStruct { queue: items };
+    pub fn create_queue<T>(items: Vec<T>) -> Queue<T> {
+        return Queue { queue: items };
     }
 
     /// Will create a new empty queue
@@ -135,12 +135,12 @@ pub mod queue {
     /// # Examples
     ///
     /// ```
-    /// use lineup_rust::queue::{create_empty, QueueStruct};
+    /// use lineup_rust::queue::{create_empty, Queue};
     ///
-    /// let empty: QueueStruct<i32> = lineup_rust::queue::create_empty();
+    /// let empty: Queue<i32> = lineup_rust::queue::create_empty();
     /// assert_eq!(empty.queue, []);
     /// ````
-    pub fn create_empty<T>() -> QueueStruct<T> {
-        return QueueStruct { queue: Vec::new() };
+    pub fn create_empty<T>() -> Queue<T> {
+        return Queue { queue: Vec::new() };
     }
 }
