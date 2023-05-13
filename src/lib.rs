@@ -22,8 +22,10 @@ pub mod queue {
         /// # Examples
         ///
         /// ```
-        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
-        /// queue::QueueActions::enqueue(&mut queue, 6);
+        /// use queues::queue::{create_queue, QueueActions};
+        ///
+        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
+        /// QueueActions::enqueue(&mut queue, 6);
         /// assert_eq!(queue.queue, [1, 2, 3, 4, 5, 6]);
         /// ````
         fn enqueue(&mut self, item: i32) {
@@ -33,9 +35,12 @@ pub mod queue {
         /// Will add multiple items to the end of the queue 
         ///
         /// # Examples
+        ///
         /// ```
-        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
-        /// queue::QueueActions::enqueue_many(&mut queue, vec![6, 7, 8, 9, 10]);
+        /// use queues::queue::{create_queue, QueueActions};
+        ///
+        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
+        /// QueueActions::enqueue_many(&mut queue, vec![6, 7, 8, 9, 10]);
         /// assert_eq!(queue.queue, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
         /// ```
         fn enqueue_many(&mut self, items: Vec<i32>) {
@@ -49,8 +54,10 @@ pub mod queue {
         /// # Examples
         ///
         /// ```
-        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
-        /// queue::QueueActions::dequeue(&mut queue);
+        /// use queues::queue::{create_queue, QueueActions};
+        ///
+        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
+        /// QueueActions::dequeue(&mut queue);
         /// assert_eq!(queue.queue, [1, 2, 3, 4]);
         /// ```
         fn dequeue(&mut self) {
@@ -61,8 +68,10 @@ pub mod queue {
         ///
         /// # Examples
         /// ```
-        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
-        /// queue::QueueActions::remove_first(&mut queue);
+        /// use queues::queue::{create_queue, QueueActions};
+        ///
+        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
+        /// QueueActions::remove_first(&mut queue);
         /// assert_eq!(queue.queue, [2, 3, 4, 5]);
         /// ````
         fn remove_first(&mut self) {
@@ -74,8 +83,10 @@ pub mod queue {
         ///
         /// # Examples
         /// ```
-        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
-        /// queue::QueueActions::remove_at(&mut queue, 2);
+        /// use queues::queue::{create_queue, QueueActions};
+        ///
+        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
+        /// QueueActions::remove_at(&mut queue, 2);
         /// assert_eq!(queue.queue, [1, 2, 4, 5]);
         /// ```
         fn remove_at(&mut self, idx: usize) {
@@ -91,8 +102,10 @@ pub mod queue {
         /// # Examples
         ///
         /// ```
-        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
-        /// queue::QueueActions::destroy(&mut queue);
+        /// use queues::queue::{create_queue, QueueActions};
+        ///
+        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
+        /// QueueActions::destroy(&mut queue);
         /// assert_eq!(queue.queue, []);
         /// ````
         fn destroy(&mut self) {
@@ -105,7 +118,9 @@ pub mod queue {
     /// # Examples
     ///
     /// ```
-    /// let queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
+    /// use queues::queue::create_queue;
+    ///
+    /// let queue = create_queue(vec![1, 2, 3, 4, 5]);
     /// assert_eq!(queue.queue, [1, 2, 3, 4, 5]);
     /// ````
     pub fn create_queue(items: Vec<i32>) -> QueueStruct {
@@ -117,7 +132,7 @@ pub mod queue {
     /// # Examples
     ///
     /// ```
-    /// let empty = queue::create_empty();
+    /// let empty = queues::queue::create_empty();
     /// assert_eq!(empty.queue, []);
     /// ````
     pub fn create_empty() -> QueueStruct {
