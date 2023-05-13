@@ -1,4 +1,3 @@
-//! # Data Structures
 //! Queue Data Structure
 pub mod queue {
 
