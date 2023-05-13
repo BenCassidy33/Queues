@@ -25,7 +25,7 @@ pub mod queue {
         /// # Examples
         ///
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
+        /// use lineup_rust::queue::{create_queue, QueueActions};
         ///
         /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
         /// QueueActions::enqueue(&mut queue, 6);
@@ -40,7 +40,7 @@ pub mod queue {
         /// # Examples
         ///
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
+        /// use lineup_rust::queue::{create_queue, QueueActions};
         ///
         /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
         /// QueueActions::enqueue_many(&mut queue, vec![6, 7, 8, 9, 10]);
@@ -57,7 +57,7 @@ pub mod queue {
         /// # Examples
         ///
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
+        /// use lineup_rust::queue::{create_queue, QueueActions};
         ///
         /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
         /// QueueActions::dequeue(&mut queue);
@@ -71,7 +71,7 @@ pub mod queue {
         ///
         /// # Examples
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
+        /// use lineup_rust::queue::{create_queue, QueueActions};
         ///
         /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
         /// QueueActions::remove_first(&mut queue);
@@ -86,7 +86,7 @@ pub mod queue {
         ///
         /// # Examples
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
+        /// use lineup_rust::queue::{create_queue, QueueActions};
         ///
         /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
         /// QueueActions::remove_at(&mut queue, 2);
@@ -105,7 +105,7 @@ pub mod queue {
         /// # Examples
         ///
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
+        /// use lineup_rust::queue::{create_queue, QueueActions};
         ///
         /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
         /// QueueActions::destroy(&mut queue);
@@ -121,7 +121,7 @@ pub mod queue {
     /// # Examples
     ///
     /// ```
-    /// use queues::queue::create_queue;
+    /// use lineup_rust::queue::create_queue;
     ///
     /// let queue = create_queue(vec![1, 2, 3, 4, 5]);
     /// assert_eq!(queue.queue, [1, 2, 3, 4, 5]);
@@ -135,7 +135,7 @@ pub mod queue {
     /// # Examples
     ///
     /// ```
-    /// let empty = queues::queue::create_empty();
+    /// let empty = lineup_rust::queue::create_empty();
     /// assert_eq!(empty.queue, []);
     /// ````
     pub fn create_empty() -> QueueStruct {

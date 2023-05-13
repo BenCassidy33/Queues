@@ -121,6 +121,7 @@
 <a href="#121" id="121">121</a>
 <a href="#122" id="122">122</a>
 <a href="#123" id="123">123</a>
+<<<<<<< HEAD
 <a href="#124" id="124">124</a>
 <a href="#125" id="125">125</a>
 <a href="#126" id="126">126</a>
@@ -147,6 +148,10 @@
 //! ! This crate is a hobby side project and is not intended to be used for production implementations !
 //! Source Code on GitHub: &lt;https://github.com/BenCassidy33/Queues&gt;
 //!
+=======
+</pre></div><pre class="rust"><code><span class="doccomment">//! # Data Structures
+//! Queue Data Structure
+>>>>>>> parent of 2f65683 (added crate warning)
 </span><span class="kw">pub mod </span>queue {
 
     <span class="attr">#[derive(Debug)]
@@ -169,10 +174,8 @@
         /// # Examples
         ///
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
-        ///
-        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
-        /// QueueActions::enqueue(&amp;mut queue, 6);
+        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
+        /// queue::QueueActions::enqueue(&amp;mut queue, 6);
         /// assert_eq!(queue.queue, [1, 2, 3, 4, 5, 6]);
         /// ````
         </span><span class="kw">fn </span>enqueue(<span class="kw-2">&amp;mut </span><span class="self">self</span>, item: i32) {
@@ -182,12 +185,9 @@
         <span class="doccomment">/// Will add multiple items to the end of the queue 
         ///
         /// # Examples
-        ///
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
-        ///
-        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
-        /// QueueActions::enqueue_many(&amp;mut queue, vec![6, 7, 8, 9, 10]);
+        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
+        /// queue::QueueActions::enqueue_many(&amp;mut queue, vec![6, 7, 8, 9, 10]);
         /// assert_eq!(queue.queue, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
         /// ```
         </span><span class="kw">fn </span>enqueue_many(<span class="kw-2">&amp;mut </span><span class="self">self</span>, items: Vec&lt;i32&gt;) {
@@ -201,10 +201,8 @@
         /// # Examples
         ///
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
-        ///
-        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
-        /// QueueActions::dequeue(&amp;mut queue);
+        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
+        /// queue::QueueActions::dequeue(&amp;mut queue);
         /// assert_eq!(queue.queue, [1, 2, 3, 4]);
         /// ```
         </span><span class="kw">fn </span>dequeue(<span class="kw-2">&amp;mut </span><span class="self">self</span>) {
@@ -215,10 +213,8 @@
         ///
         /// # Examples
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
-        ///
-        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
-        /// QueueActions::remove_first(&amp;mut queue);
+        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
+        /// queue::QueueActions::remove_first(&amp;mut queue);
         /// assert_eq!(queue.queue, [2, 3, 4, 5]);
         /// ````
         </span><span class="kw">fn </span>remove_first(<span class="kw-2">&amp;mut </span><span class="self">self</span>) {
@@ -226,21 +222,16 @@
         }
 
         <span class="doccomment">/// Will remove an item at a given index if the index is valid (keep in mind that the first index is 0)
-        /// Will panic if index is out of bounds for the queue
         ///
         /// # Examples
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
-        ///
-        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
-        /// QueueActions::remove_at(&amp;mut queue, 2);
+        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
+        /// queue::QueueActions::remove_at(&amp;mut queue, 2);
         /// assert_eq!(queue.queue, [1, 2, 4, 5]);
         /// ```
         </span><span class="kw">fn </span>remove_at(<span class="kw-2">&amp;mut </span><span class="self">self</span>, idx: usize) {
             <span class="kw">if </span>idx &lt;= <span class="self">self</span>.queue.len() {
                 <span class="self">self</span>.queue.remove(idx);
-            } <span class="kw">else </span>{
-                <span class="macro">panic!</span>(<span class="string">&quot;Index out of bounds&quot;</span>);
             };
         }
 
@@ -249,10 +240,8 @@
         /// # Examples
         ///
         /// ```
-        /// use queues::queue::{create_queue, QueueActions};
-        ///
-        /// let mut queue = create_queue(vec![1, 2, 3, 4, 5]);
-        /// QueueActions::destroy(&amp;mut queue);
+        /// let mut queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
+        /// queue::QueueActions::destroy(&amp;mut queue);
         /// assert_eq!(queue.queue, []);
         /// ````
         </span><span class="kw">fn </span>destroy(<span class="kw-2">&amp;mut </span><span class="self">self</span>) {
@@ -265,9 +254,7 @@
     /// # Examples
     ///
     /// ```
-    /// use queues::queue::create_queue;
-    ///
-    /// let queue = create_queue(vec![1, 2, 3, 4, 5]);
+    /// let queue = queue::create_queue(vec![1, 2, 3, 4, 5]);
     /// assert_eq!(queue.queue, [1, 2, 3, 4, 5]);
     /// ````
     </span><span class="kw">pub fn </span>create_queue(items: Vec&lt;i32&gt;) -&gt; QueueStruct {
@@ -279,7 +266,7 @@
     /// # Examples
     ///
     /// ```
-    /// let empty = queues::queue::create_empty();
+    /// let empty = queue::create_empty();
     /// assert_eq!(empty.queue, []);
     /// ````
     </span><span class="kw">pub fn </span>create_empty() -&gt; QueueStruct {

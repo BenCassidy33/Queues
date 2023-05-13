@@ -1,5 +1,5 @@
 [package]
-name = "LineupRust"
+name = "lineup_rust"
 authors = ["Ben Cassidy"]
 version = "0.1.0"
 edition = "2021"
