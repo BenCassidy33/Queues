@@ -1,7 +1,7 @@
 //! Queue Data Structure
 //!
 //! ! This crate is a hobby side project and is not intended to be used for production implementations !
-//! Source Code on GitHub: https://github.com/BenCassidy33/Queues
+//! Source Code on GitHub: <https://github.com/BenCassidy33/Queues>
 //!
 pub mod queue {
 
