@@ -1,4 +1,7 @@
 //! Queue Data Structure
+//!
+//! ! This crate is a hobby side project and is not intended to be used for production implementations !
+//!
 pub mod queue {
 
     #[derive(Debug)]
