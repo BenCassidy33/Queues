@@ -1,1 +1,1 @@
-window.ALL_CRATES = ["queues"];
+window.ALL_CRATES = ["lineup_rust","queues"];
