@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["create_empty","create_queue"],"struct":["QueueStruct"],"trait":["QueueActions"]};
