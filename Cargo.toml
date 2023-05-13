@@ -4,7 +4,8 @@ authors = ["Ben Cassidy"]
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-description = "A simple queue implementation in Rust. This is a learning and a hobby project and is not intended for production use. Source Code: https://github.com/BenCassidy33/Queues"
+description = "A simple queue implementation in Rust. This is a learning and a hobby project and is not intended for production use. "
+repository = "https://github.com/BenCassidy33/Queues"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
